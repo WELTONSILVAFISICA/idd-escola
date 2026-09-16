@@ -1,0 +1,133 @@
+/* =========================================================================
+   IDD Escola — painel administrativo
+   ========================================================================= */
+
+.admin-wrap {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 28px 18px 60px;
+}
+
+.admin-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 22px;
+}
+.admin-topbar .marca {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.admin-topbar .marca .logo {
+  width: 38px; height: 38px; border-radius: 12px;
+  background: linear-gradient(120deg, var(--azul), var(--roxo));
+  display: flex; align-items: center; justify-content: center;
+  font-size: 19px;
+}
+.admin-topbar h1 { font-size: 18px; margin: 0; }
+.admin-topbar p { margin: 0; font-size: 12px; color: var(--texto-suave); }
+
+.btn-sair {
+  background: #fff;
+  border: 1.5px solid var(--borda);
+  color: var(--texto-suave);
+  padding: 9px 16px;
+  border-radius: 99px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* ---------- Tela de login ---------- */
+.login-wrap {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+.login-card {
+  width: 100%;
+  max-width: 380px;
+  background: #fff;
+  border-radius: var(--raio);
+  box-shadow: var(--sombra);
+  padding: 30px 26px;
+  text-align: center;
+}
+.login-card .logo {
+  width: 52px; height: 52px; border-radius: 16px; margin: 0 auto 14px;
+  background: linear-gradient(120deg, var(--azul), var(--roxo));
+  display: flex; align-items: center; justify-content: center;
+  font-size: 26px; color: #fff;
+}
+.login-card h2 { margin: 0 0 4px; font-size: 18px; }
+.login-card p { margin: 0 0 20px; font-size: 13px; color: var(--texto-suave); }
+.login-card input {
+  width: 100%; padding: 13px 14px; border-radius: var(--raio-pequeno);
+  border: 1.5px solid var(--borda); font-size: 15px; margin-bottom: 12px; text-align: center;
+}
+.login-erro {
+  color: var(--vermelho-escuro); font-size: 13px; margin-top: -4px; margin-bottom: 10px; display: none;
+}
+.login-erro.visivel { display: block; }
+
+/* ---------- Cards de resumo ---------- */
+.cards-resumo {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 14px;
+  margin-bottom: 22px;
+}
+.card-resumo {
+  background: #fff;
+  border-radius: var(--raio-pequeno);
+  padding: 16px 18px;
+  box-shadow: var(--sombra);
+}
+.card-resumo .rotulo { font-size: 12px; color: var(--texto-suave); font-weight: 600; }
+.card-resumo .valor { font-size: 26px; font-weight: 800; margin-top: 2px; }
+
+/* ---------- Grade de gráficos ---------- */
+.grade-graficos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+  margin-bottom: 22px;
+}
+.painel-grafico {
+  background: #fff;
+  border-radius: var(--raio-pequeno);
+  padding: 16px 18px 10px;
+  box-shadow: var(--sombra);
+}
+.painel-grafico h3 { margin: 0 0 10px; font-size: 14.5px; }
+.painel-grafico canvas { width: 100%; display: block; }
+.legenda-grafico {
+  display: flex; flex-wrap: wrap; gap: 10px; margin-top: 10px; font-size: 12px; color: var(--texto-suave);
+}
+.legenda-item { display: flex; align-items: center; gap: 5px; }
+.legenda-ponto { width: 10px; height: 10px; border-radius: 50%; display: inline-block; }
+
+/* ---------- Tabela ---------- */
+.painel-tabela {
+  background: #fff;
+  border-radius: var(--raio-pequeno);
+  padding: 16px 18px;
+  box-shadow: var(--sombra);
+  overflow-x: auto;
+}
+.painel-tabela h3 { margin: 0 0 12px; font-size: 14.5px; }
+table.tabela-respostas { width: 100%; border-collapse: collapse; font-size: 13px; min-width: 640px; }
+table.tabela-respostas th {
+  text-align: left; font-size: 11.5px; text-transform: uppercase; letter-spacing: .3px;
+  color: var(--texto-suave); padding: 8px 10px; border-bottom: 1.5px solid var(--borda);
+}
+table.tabela-respostas td { padding: 9px 10px; border-bottom: 1px solid #f1f5f9; }
+.badge-nivel {
+  display: inline-block; padding: 3px 10px; border-radius: 99px;
+  font-size: 11.5px; font-weight: 700; color: #fff;
+}
+.vazio { text-align: center; color: var(--texto-suave); padding: 30px 0; font-size: 13.5px; }
